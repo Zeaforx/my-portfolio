@@ -4,7 +4,17 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
-const projectsData = [
+type Project = {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    tag: string[];
+    gitUrl: string;
+    previewUrl: string;
+};
+
+const projectsData: Project[] = [
     {
         id: 1,
         title: "React Portfolio Website",
@@ -68,7 +78,7 @@ const ProjectsSection = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
-    const handleTagChange = (newTag) => {
+    const handleTagChange = (newTag: any) => {
         setTag(newTag);
     };
 
@@ -118,6 +128,7 @@ const ProjectsSection = () => {
                         transition={{ duration: 0.3, delay: index * 0.4 }}
                     >
                         <ProjectCard
+                            tag={project.tag}
                             key={project.id}
                             title={project.title}
                             description={project.description}
