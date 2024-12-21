@@ -1,7 +1,7 @@
 "use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
-import TabButton from "./TabButton";
+// import TabButton from "./TabButton";
 
 const TAB_DATA = [
     {
@@ -75,8 +75,8 @@ const AboutSection = () => {
                         believe in the power of collaboration, and when you
                         choose to work with me, you&apos;re not just getting a
                         web developer, but a dedicated partner committed to
-                        bringing your vision to life. Let&apos;s connect, explore
-                        my portfolio, and embark on a journey to create
+                        bringing your vision to life. Let&apos;s connect,
+                        explore my portfolio, and embark on a journey to create
                         something amazing together!
                     </p>
                 </div>
