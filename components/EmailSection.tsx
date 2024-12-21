@@ -53,7 +53,7 @@ const EmailSection = () => {
         console.log(event.target.value);
     }
 
-    async function handleSubmit(event) {
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
         await setDoc(doc(db, "DigitalHubContactForm", form.email), {
